@@ -28,7 +28,8 @@ find_library(CUDA_NVRTC_LIB libnvrtc nvrtc HINTS "${CUDA_TOOLKIT_ROOT_DIR}/lib64
 
 set(LIBS ${LIBS} ${CUDA_LIBRARIES} ${CUDA_LIB} ${CUDA_NVRTC_LIB})
 
-set(DEFAULT_CUDA_ARCH "30;50")
+#set(DEFAULT_CUDA_ARCH "30;50")
+set(DEFAULT_CUDA_ARC "50,52")
 
 # Fermi GPUs are only supported with CUDA < 9.0
 if (CUDA_VERSION VERSION_LESS 9.0)
